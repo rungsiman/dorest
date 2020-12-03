@@ -1,0 +1,9 @@
+.idea/
+inspectionProfiles/
+build/
+dist/
+dorest.egg-info/
+dorest.iml
+misc.xml
+modules.xml
+vcs.xml
