@@ -187,7 +187,7 @@ def mandate(**params):
             """Receive HTTP request handler (function) of Django rest_framework's APIView class."""
 
             # Assign rest_framework.request.Request object to 'request' variable, which is to be validated
-            request = args[1]
+            request = args[0] if isinstance(args[0], Request) else args[1]
 
             missings = []
             blanks = []

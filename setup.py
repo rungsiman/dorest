@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
     name='dorest',
-    version='0.1.0',
+    version='0.1.2',
     author_email='rungsiman@gmail.com',
     description="API manager extension for Django REST Framework",
     long_description=long_description,

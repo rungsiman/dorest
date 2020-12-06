@@ -164,7 +164,7 @@ class Endpoint:
                     continue
             
             try:
-                return json.loads(obj, encoding='utf-8')
+                return json.loads(obj)
             except json.decoder.JSONDecodeError:
                 return str(obj)
 
@@ -182,7 +182,7 @@ class Endpoint:
                     return type_candidate(obj)
 
             if any(issubclass(param.annotation, type_candidate) for type_candidate in [list, tuple, dict]):
-                return json.loads(obj, encoding='utf-8')
+                return json.loads(obj)
             else:
                 raise ValueError("Invalid type of argument '%s' (expected '%s' but '%s' was given)"
                                  % (param.name, param.annotation.__name__, type(obj).__name__))
